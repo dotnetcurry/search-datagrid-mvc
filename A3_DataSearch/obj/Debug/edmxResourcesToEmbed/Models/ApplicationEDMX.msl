@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApplicationModelStoreContainer" CdmEntityContainer="ApplicationEntities">
+    <EntitySetMapping Name="PersonInfoes">
+      <EntityTypeMapping TypeName="ApplicationModel.PersonInfo">
+        <MappingFragment StoreEntitySet="PersonInfo">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="PersonFirstName" ColumnName="PersonFirstName" />
+          <ScalarProperty Name="PersonLastName" ColumnName="PersonLastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<style type="text/css">
+    table, td {
+      border:double;
+    }
+    td {
+      width:120px;
+      font-size:20px;
+    }
+    thead {
+     background-color:red;
+    }
+</style>
+<script src="~/Scripts/jquery-2.1.1.min.js"></script>
+
+<script src="~/Scripts/knockout-3.2.0.js"></script>
+
+
+<h2>Index</h2>
+Select the Search Criteria: (Select Property from List and Enter Value in TextBox)
+<table>
+    <tr>
+        <td>
+           <select id="lstprops" data-bind="options:Properties,optionsCaption:'Select Property',value:SelectedProperty"></select>
+        </td>
+        <td>
+            =
+        </td>
+        <td>
+            <input type="text" id="txtval"
+                   data-bind="value:FilterValue,valueUpdate:'afterkeydown'"/>
+             
+        </td>
+    </tr>
+</table>
+
+<table>
+    <thead>
+        <tr>
+            <td>PersonId</td><td>FirstName</td><td>LastName</td><td>Address</td><td>Date of Birth</td><td>Age</td><td>Gender</td><td>City</td><td>District</td><td>State</td><td>Mobile No</td><td>Email</td>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach:Persons">
+        <tr>
+            <td><span data-bind="text:PersonId"></span></td>
+            <td><span data-bind="text:PersonFirstName"></span></td>
+            <td><span data-bind="text:PersonLastName"></span></td>
+            <td><span data-bind="text:Address"></span></td>
+            <td><span data-bind="text:DateOfBirth"></span></td>
+            <td><span data-bind="text:Age"></span></td>
+            <td><span data-bind="text:Gender"></span></td>
+            <td><span data-bind="text:City"></span></td>
+            <td><span data-bind="text:District"></span></td>
+            <td><span data-bind="text:State"></span></td>
+            <td><span data-bind="text:MobileNo"></span></td>
+            <td><span data-bind="text:Email"></span></td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="~/Scripts/MyScripts/SerachLogic.js"></script>
+
